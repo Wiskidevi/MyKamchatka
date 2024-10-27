@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">My Kamchatka</string>
+    <string name="btn_next">Далее</string>
+    <string name="btn_previous">Назад</string>
+    <string name="txt_onboarding1_title">Необычные экскурсии</string>
+    <string name="txt_onboarding1_signature">Откройте для себя самые невероятные места Камчатки</string>
+    <string name="txt_onboarding2_title">Комфорт</string>
+    <string name="txt_onboarding2_signature">Выбирайте удобные для себя условия при подборе экскурсий</string>
+    <string name="txt_onboarding3_title">Деликатесы</string>
+    <string name="txt_onboarding3_signature">Лучшие места для того, чтобы попробовать Камчатку на вкус</string>
+    <string name="btn_enter_acc">Войти</string>
+    <string name="btn_reg_acc">Зарегистрироваться</string>
+    <string name="enter_email">Введите электронную почту</string>
+    <string name="enter_pass">Введите пароль</string>
+    <string name="confirm_pass">Подтвердите пароль</string>
+    <string name="conf_inf_confirm">Я согласен с условиями обслуживания и политикой\n конфиденциальности</string>
+    <string name="enter_surname">Введите фамилию</string>
+    <string name="enter_name">Введите имя</string>
+    <string name="enter_thirdname">Введите отчество (необязательно)</string>
+    <string name="enter_birthday">Дата рождения</string>
+    <string name="rb_male">Мужской</string>
+    <string name="rb_female">Женский</string>
+    <string name="make_acc">Создать аккаунт</string>
+    <string name="acc_picture">Добавьте фото, чтобы вас узнавали</string>
+    <string name="what_need_acc">Что вы ищите?</string>
+    <string name="acc_tourism">Туризм</string>
+    <string name="acc_company">Туристическая компания</string>
+    <string name="company_reg">Регистрация компании</string>
+    <string name="company_name">Введите название компании</string>
+    <string name="company_category">Выберите услуги, которые вы собираетесь предлагать:</string>
+    <string name="category1">Туристические походы</string>
+    <string name="category2">Морские экскурсии</string>
+    <string name="category3">Аренда авто</string>
+    <string name="category4">Гостиницы</string>
+    <string name="category5">Джип-туры</string>
+    <string name="category6">Трансфер</string>
+    <string name="category7">Рыбалка</string>
+    <string name="category8">Сплавы по реке</string>
+
+</resources>

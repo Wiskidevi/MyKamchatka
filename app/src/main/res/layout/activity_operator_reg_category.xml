@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OperatorRegCategoryActivity">
+
+    <TextView
+        android:id="@+id/tvTextEnter"
+        style="@style/onboarding_title_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/company_reg"
+        android:layout_marginTop="90dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/l_surname"
+        style="@style/til_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="56dp"
+        app:boxStrokeErrorColor="@color/error_color"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@color/error_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTextEnter"
+        app:placeholderTextAppearance="@font/pangolin"
+        app:placeholderTextColor="@color/text_input_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pangolin"
+            android:hint="@string/company_name"
+            android:inputType="textEmailAddress"
+            android:textColor="#525252"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="29dp"
+        android:fontFamily="@font/pangolin"
+        android:text="@string/company_category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_surname" />
+
+    <CheckBox
+        android:id="@+id/hikingTrips"
+        android:fontFamily="@font/pangolin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="16dp"
+        android:layoutDirection="rtl"
+        android:textDirection="ltr"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/category1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <CheckBox
+        android:id="@+id/seaExcursions"
+        android:fontFamily="@font/pangolin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="29dp"
+        android:layout_marginLeft="29dp"
+        android:layoutDirection="rtl"
+        android:textDirection="ltr"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/category2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hikingTrips" />
+
+    <CheckBox
+        android:id="@+id/carRent"
+        android:fontFamily="@font/pangolin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="29dp"
+        android:layout_marginLeft="29dp"
+        android:layoutDirection="rtl"
+        android:textDirection="ltr"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/category3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seaExcursions" />
+
+    <CheckBox
+        android:id="@+id/hotels"
+        android:fontFamily="@font/pangolin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="29dp"
+        android:layout_marginLeft="29dp"
+        android:layoutDirection="rtl"
+        android:textDirection="ltr"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/category4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carRent" />
+
+    <CheckBox
+        android:id="@+id/jeapTours"
+        android:fontFamily="@font/pangolin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="29dp"
+        android:layout_marginLeft="29dp"
+        android:layoutDirection="rtl"
+        android:textDirection="ltr"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/category5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hotels" />
+
+    <CheckBox
+        android:id="@+id/transfer"
+        android:fontFamily="@font/pangolin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="29dp"
+        android:layout_marginLeft="29dp"
+        android:layoutDirection="rtl"
+        android:textDirection="ltr"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/category6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jeapTours" />
+
+    <CheckBox
+        android:id="@+id/fishing"
+        android:fontFamily="@font/pangolin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="29dp"
+        android:layout_marginLeft="29dp"
+        android:layoutDirection="rtl"
+        android:textDirection="ltr"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/category7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transfer" />
+
+    <CheckBox
+        android:id="@+id/rafting"
+        android:fontFamily="@font/pangolin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="29dp"
+        android:layout_marginLeft="29dp"
+        android:layoutDirection="rtl"
+        android:textDirection="ltr"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/category8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fishing" />
+
+    <android.widget.Button
+        android:id="@+id/btnNext"
+        style="@style/btn_style"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/shape"
+        android:text="@string/btn_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/living"
+        android:title="Проживание"
+        android:icon="@drawable/ic_living"/>
+
+    <item
+        android:id="@+id/tours"
+        android:title="Туры"
+        android:icon="@drawable/ic_tours"/>
+
+    <item
+        android:id="@+id/news"
+        android:title="Новости"
+        android:icon="@drawable/ic_news"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Профиль"
+        android:icon="@drawable/ic_account" />
+
+</menu>
