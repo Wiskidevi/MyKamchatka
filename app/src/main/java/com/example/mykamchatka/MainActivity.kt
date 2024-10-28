@@ -5,16 +5,23 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.mykamchatka.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
+
+    private var _binding: ActivityMainBinding? = null
+    private val binding
+        get() = _binding ?: throw IllegalStateException("Binding for ActivityRegistration must not be null!")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        _binding = ActivityMainBinding.inflate(layoutInflater) // Inflate the binding
+        setContentView(binding.root)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -22,15 +29,15 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val navNewsFragment = NavNewsFragment()
-        val navToursFragment = NavToursFragment()
-        val navLivingFragment = NavLivingFragment()
-        val navProfileFragment = NavProfileFragment()
+        val navNewsFragment = NavNewsFragment.newInstance()
+        val navToursFragment = NavToursFragment.newInstance()
+        val navLivingFragment = NavLivingFragment.newInstance()
+        val navProfileFragment = NavProfileFragment.newInstance()
 
         setCurrentFragment(navNewsFragment)
-        bottomNavigationView.selectedItemId = R.id.news
+        binding.bottomNavigationView.selectedItemId = R.id.news
 
-        bottomNavigationView.setOnItemSelectedListener { item ->
+        binding.bottomNavigationView.setOnItemSelectedListener { item ->
             when(item.itemId) {
                 R.id.living -> {
                     setCurrentFragment(navLivingFragment)
@@ -46,6 +53,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             true
+        }
+
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.bottomNavigationView) { view, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(bottom = 0) // Устанавливаем нижний padding в 0
+            insets
         }
 
     }

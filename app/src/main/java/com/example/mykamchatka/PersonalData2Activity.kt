@@ -15,7 +15,6 @@ class PersonalData2Activity : AppCompatActivity() {
     private var _binding: ActivityPersonalData2Binding? = null
     private val binding get() = _binding ?: throw IllegalStateException("Binding for PersonalData2Activity must not be null!")
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityPersonalData2Binding.inflate(layoutInflater) // Inflate the binding
@@ -27,7 +26,6 @@ class PersonalData2Activity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
 
 
         binding.btnNext.setOnClickListener {
