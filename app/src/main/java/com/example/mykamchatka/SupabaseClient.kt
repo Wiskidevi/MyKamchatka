@@ -19,6 +19,7 @@ data class News (
 )
 
 
+
 class SupabaseClient {
     private val client = createSupabaseClient(
         supabaseUrl = "https://dghywtgmjhxooohbuthl.supabase.co",
