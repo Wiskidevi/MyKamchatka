@@ -24,6 +24,7 @@ class SplashActivity : AppCompatActivity() {
             insets
         }
 
+
         //window.setFlags(
         //    windowManager.LayoutParams.FLAG_FULLSCREEN,
         //    WindowManager.LayoutParams.FLAG_FULLSCREEN

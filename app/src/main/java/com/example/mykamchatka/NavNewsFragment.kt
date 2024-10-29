@@ -10,6 +10,7 @@ import com.example.mykamchatka.databinding.FragmentNewsNavMenuBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
+
 class NavNewsFragment : Fragment() {
 
     private val fragList = listOf(
@@ -73,6 +74,7 @@ class NavNewsFragment : Fragment() {
                 currentTabPosition = position
             }
         })
+
     }
 
     companion object {
