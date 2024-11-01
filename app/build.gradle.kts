@@ -1,8 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("org.jetbrains.kotlin.plugin.serialization") version("1.8.0")
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.20" // +
 }
+
+
 
 android {
     namespace = "com.example.mykamchatka"
@@ -61,7 +63,10 @@ dependencies {
     implementation("org.jsoup:jsoup:1.13.1")
 
     implementation(libs.postgrest.kt)
-    implementation("io.ktor:ktor-client-cio:2.3.3")
+    implementation("io.ktor:ktor-client-cio:3.0.0") // +
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
 
 }

@@ -11,6 +11,13 @@
         android:orientation="vertical"
         android:padding="8dp">
 
+        <ImageView
+            android:id="@+id/ivNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:contentDescription="newsImage" />
+
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"

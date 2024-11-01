@@ -75,6 +75,8 @@ class NavNewsFragment : Fragment() {
             }
         })
 
+
+
     }
 
     companion object {
