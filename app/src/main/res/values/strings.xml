@@ -3,17 +3,17 @@
     <string name="btn_next">Далее</string>
     <string name="btn_previous">Назад</string>
     <string name="txt_onboarding1_title">Необычные экскурсии</string>
-    <string name="txt_onboarding1_signature">Откройте для себя самые невероятные места Камчатки</string>
+    <string name="txt_onboarding1_signature">Откройте для себя самые невероятные места\nКамчатки</string>
     <string name="txt_onboarding2_title">Комфорт</string>
-    <string name="txt_onboarding2_signature">Выбирайте удобные для себя условия при подборе экскурсий</string>
+    <string name="txt_onboarding2_signature">Выбирайте удобные для себя условия при\nподборе экскурсий</string>
     <string name="txt_onboarding3_title">Деликатесы</string>
-    <string name="txt_onboarding3_signature">Лучшие места для того, чтобы попробовать Камчатку на вкус</string>
+    <string name="txt_onboarding3_signature">Лучшие места для того, чтобы попробовать\nКамчатку на вкус</string>
     <string name="btn_enter_acc">Войти</string>
     <string name="btn_reg_acc">Зарегистрироваться</string>
     <string name="enter_email">Введите электронную почту</string>
     <string name="enter_pass">Введите пароль</string>
     <string name="confirm_pass">Подтвердите пароль</string>
-    <string name="conf_inf_confirm">Я согласен с условиями обслуживания и политикой\n конфиденциальности</string>
+    <string name="conf_inf_confirm">Я согласен с условиями обслуживания и политикой\nконфиденциальности</string>
     <string name="enter_surname">Введите фамилию</string>
     <string name="enter_name">Введите имя</string>
     <string name="enter_thirdname">Введите отчество (необязательно)</string>
@@ -52,5 +52,7 @@
     <string name="menuProfile">Профиль</string>
     <string name="titleLiving">Поиск жилья</string>
     <string name="ivingSearch">Найдите себе уютное место</string>
+    <string name="tvProfile">Профиль</string>
+    <string name="tourimage">tourImage</string>
 
 </resources>

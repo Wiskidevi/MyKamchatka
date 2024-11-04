@@ -11,8 +11,8 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
-        android:layout_width="407dp"
-        android:layout_height="627dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,12 +24,11 @@
         style="@style/btn_style"
         android:layout_width="121dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="88dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/shape"
         android:text="@string/btn_next"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

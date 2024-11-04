@@ -9,5 +9,5 @@ data class Living (
     val name: String = "",
     val date: String = "",
     val price: String = "",
-    val image: String = ""
+    val imageUrl: String = ""
 )

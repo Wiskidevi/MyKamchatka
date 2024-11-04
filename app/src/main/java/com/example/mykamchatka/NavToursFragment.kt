@@ -30,9 +30,6 @@ class NavToursFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        //val navToursListFragment = ToursListFragment.newInstance()
-        //setCurrentFragment(navToursListFragment)
-
         super.onViewCreated(view, savedInstanceState)
 
         toursAdapter = ToursAdapter(emptyList())
@@ -44,6 +41,7 @@ class NavToursFragment : Fragment() {
         // Показываем анимацию загрузки
         binding.loadingAnimation.visibility = View.VISIBLE
         binding.rvTours.visibility = View.GONE
+        binding.btnFilterTour.visibility = View.GONE
 
         val db = SupabaseHelper()
 
@@ -53,6 +51,7 @@ class NavToursFragment : Fragment() {
 
             binding.loadingAnimation.visibility = View.GONE
             binding.rvTours.visibility = View.VISIBLE
+            binding.btnFilterTour.visibility = View.VISIBLE
             return@launch
         }
 
@@ -63,10 +62,5 @@ class NavToursFragment : Fragment() {
         fun newInstance() = NavToursFragment()
     }
 
-//    private fun setCurrentFragment(fragment: Fragment) =
-//        parentFragmentManager.beginTransaction().apply {
-//            replace(R.id.flFragmentToursList, fragment)
-//            commit()
-//        }
 
 }

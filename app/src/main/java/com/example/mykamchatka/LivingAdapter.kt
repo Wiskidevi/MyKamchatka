@@ -1,6 +1,7 @@
 package com.example.mykamchatka
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,7 +33,7 @@ class LivingAdapter(private var mLiving: List<Living>) : RecyclerView.Adapter<Li
         viewHolder.priceTextView.text = living.price
 
         Glide.with(viewHolder.itemView.context)
-            .load(living.image) // Загрузка изображения по ссылке
+            .load(living.imageUrl) // Загрузка изображения по ссылке
             .into(viewHolder.imageLivingView) // Установка изображения в ImageView
     }
 

@@ -13,10 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tvTitleNews"
-        android:fontFamily="@font/pangolin"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_marginTop="30dp"
+        style="@style/heading_text_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

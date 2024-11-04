@@ -39,6 +39,7 @@ class NavLivingFragment : Fragment() {
         // Показываем анимацию загрузки
         binding.loadingAnimation.visibility = View.VISIBLE
         binding.rvLiving.visibility = View.GONE
+        binding.btnFilterLiving.visibility = View.GONE
 
         val db = SupabaseHelper()
 
@@ -49,6 +50,7 @@ class NavLivingFragment : Fragment() {
             // Скрываем анимацию загрузки и показываем RecyclerView после загрузки данных
             binding.loadingAnimation.visibility = View.GONE
             binding.rvLiving.visibility = View.VISIBLE
+            binding.btnFilterLiving.visibility = View.VISIBLE
             return@launch
         }
     }

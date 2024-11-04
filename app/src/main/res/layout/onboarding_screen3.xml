@@ -6,29 +6,23 @@
     android:layout_height="match_parent"
     tools:ignore="ExtraText">
 
-    <!-- Картинка или иконка для третьего экрана -->
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="413dp"
+        android:layout_width="match_parent"
         android:layout_height="552dp"
         android:src="@drawable/onboarding_image3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />  <!-- Изображение для третьего экрана --><![CDATA[
-    />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    ]]>
 
     <android.widget.TextView
         android:id="@+id/textView1"
         style="@style/onboarding_title_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="112dp"
+        android:layout_marginStart="40dp"
         android:text="@string/txt_onboarding3_title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -38,11 +32,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_onboarding3_signature"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="40dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"
-        app:layout_constraintVertical_bias="0.233" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
