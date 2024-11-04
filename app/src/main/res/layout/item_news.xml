@@ -2,7 +2,9 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp"
+    app:cardCornerRadius="20dp"
     android:elevation="4dp">
 
     <LinearLayout
@@ -11,31 +13,88 @@
         android:orientation="vertical"
         android:padding="8dp">
 
-        <ImageView
-            android:id="@+id/ivNews"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:contentDescription="newsImage" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivNews"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:padding="20dp"
+                android:scaleType="fitXY"
+                android:scaleX="1.1"
+                android:scaleY="1.1"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                android:contentDescription="@string/newsImageText" />
+
+                <TextView
+                    android:id="@+id/tvTheme"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:padding="7dp"
+                    android:layout_marginTop="29dp"
+                    android:layout_marginStart="1dp"
+                    android:background="@drawable/rounded_label"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                    android:fontFamily="@font/pangolin"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+        </FrameLayout>
 
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/pangolin"/>
 
-        <TextView
-            android:id="@+id/tvDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tvDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp" />
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/pangolin"/>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/pangolin"/>
+
+            <View android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <android.widget.Button
+                android:id="@+id/btnReadNews"
+                android:layout_width="108dp"
+                android:layout_height="48dp"
+                style="@style/btn_style"
+                android:background="@drawable/shape"
+                android:text="@string/btnReadNews"
+                android:layout_gravity="end"/>
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

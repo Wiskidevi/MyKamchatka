@@ -4,22 +4,22 @@
 
     <item
         android:id="@+id/living"
-        android:title="Проживание"
+        android:title="@string/menuLiving"
         android:icon="@drawable/ic_living"/>
 
     <item
         android:id="@+id/tours"
-        android:title="Туры"
+        android:title="@string/menuTours"
         android:icon="@drawable/ic_tours"/>
 
     <item
         android:id="@+id/news"
-        android:title="Новости"
+        android:title="@string/menuNews"
         android:icon="@drawable/ic_news"/>
 
     <item
         android:id="@+id/profile"
-        android:title="Профиль"
+        android:title="@string/menuProfile"
         android:icon="@drawable/ic_account" />
 
 </menu>

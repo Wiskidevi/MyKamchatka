@@ -23,7 +23,7 @@ class NavNewsFragment : Fragment() {
     private var _binding: FragmentNewsNavMenuBinding? = null
     private val binding
         get() = _binding
-            ?: throw IllegalStateException("Binding for FragmentProfileBinding must not be null")
+            ?: throw IllegalStateException("Binding for FragmentNewsNavMenuBinding must not be null")
 
     private var currentTabPosition = 0
 

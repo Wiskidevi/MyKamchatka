@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="20dp"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivTours"
+            android:layout_width="160dp"
+            android:layout_height="280dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            android:contentDescription="@string/newsImageText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitleTours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/pangolin"/>
+
+
+                <TextView
+                    android:id="@+id/tvDateTours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/pangolin"/>
+
+                <TextView
+                    android:id="@+id/tvDurationTours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_marginTop="9dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/pangolin"/>
+
+                <TextView
+                    android:id="@+id/tvPriceTours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_marginTop="30dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/pangolin"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_marginTop="22dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <View android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ImageButton
+                            android:id="@+id/btnBuyTour"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:foregroundGravity="center"
+                            style="@style/btn_transparent_style"
+                            android:contentDescription="@string/btnBuy"
+                            android:background="@drawable/ic_shopping_card"
+                            android:text="@string/btnReadNews" />
+
+                        <View android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <android.widget.Button
+                            android:id="@+id/btnMoreTour"
+                            android:layout_width="108dp"
+                            android:layout_height="48dp"
+                            style="@style/btn_style"
+                            android:background="@drawable/shape"
+                            android:text="@string/btnMore"
+                            android:layout_gravity="end"/>
+
+
+                    </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

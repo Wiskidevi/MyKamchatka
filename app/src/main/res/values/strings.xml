@@ -36,5 +36,21 @@
     <string name="category6">Трансфер</string>
     <string name="category7">Рыбалка</string>
     <string name="category8">Сплавы по реке</string>
+    <string name="newsImageText">newsImage</string>
+    <string name="btnReadNews">Читать</string>
+    <string name="btnBuy">Buy</string>
+    <string name="btnMore">Подробнее</string>
+    <string name="tvTitleNews">Новости</string>
+    <string name="tvTitleTours">Поиск туров</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="searchTours">Найти тур своей мечты</string>
+    <string name="btnFilters">Фильтры</string>
+    <string name="menuLiving">Проживание</string>
+    <string name="menuTours">Туры</string>
+    <string name="menuNews">Новости</string>
+    <string name="menuProfile">Профиль</string>
+    <string name="titleLiving">Поиск жилья</string>
+    <string name="ivingSearch">Найдите себе уютное место</string>
 
 </resources>
