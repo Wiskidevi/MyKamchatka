@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView10"
@@ -76,14 +75,21 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/arrowImageView"
-            android:layout_width="16dp"
-            android:layout_height="15dp"
-            android:src="@drawable/ic_arrov"
-            app:tint="@color/black" />
+
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/arrowImageView"
+        android:layout_width="16dp"
+        android:layout_height="15dp"
+        android:layout_gravity="center_vertical|end"
+        android:src="@drawable/ic_arrov"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:tint="@color/black" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/settingsRecyclerView"

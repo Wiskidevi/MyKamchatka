@@ -8,6 +8,10 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import com.example.mykamchatka.databinding.ActivityMainBinding
+import com.example.mykamchatka.living_branch.NavLivingFragment
+import com.example.mykamchatka.news_branch.NavNewsFragment
+import com.example.mykamchatka.profile_branch.NavProfileFragment
+import com.example.mykamchatka.tours_branch.NavToursFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -33,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         val navToursFragment = NavToursFragment.newInstance()
         val navLivingFragment = NavLivingFragment.newInstance()
         val navProfileFragment = NavProfileFragment.newInstance()
+
 
         setCurrentFragment(navNewsFragment)
         binding.bottomNavigationView.selectedItemId = R.id.news
@@ -67,7 +72,19 @@ class MainActivity : AppCompatActivity() {
     private fun setCurrentFragment(fragment: Fragment) =
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.flFragment, fragment)
+            addToBackStack(null)
             commit()
         }
 
+
+    fun deleteFragment(layout : Int) {
+        supportFragmentManager
+            .beginTransaction().apply {
+                supportFragmentManager
+                    .findFragmentById(layout)?.let {
+                    remove(it)
+                }
+                commit()
+            }
+    }
 }

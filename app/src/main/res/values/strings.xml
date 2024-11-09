@@ -54,5 +54,9 @@
     <string name="ivingSearch">Найдите себе уютное место</string>
     <string name="tvProfile">Профиль</string>
     <string name="tourimage">tourImage</string>
+    <string name="headerMyTours">Мои туры</string>
+    <string name="headerMyHotels">Мои отели</string>
+    <string name="headerMyTickets">Мои билеты</string>
+    <string name="ibShoppingCart">Корзина</string>
 
 </resources>

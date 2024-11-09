@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".tours_branch.ShoppingCartFragment">
+
 
     <TextView
         android:id="@+id/tvTours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/pangolin"
-        android:text="@string/tvTitleTours"
+        android:text="Корзина"
         android:textSize="22sp"
         android:textStyle="bold"
         android:layout_marginTop="30dp"
@@ -36,51 +36,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageButton
-        android:id="@+id/ibShoppingCart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="26dp"
-        android:background="@drawable/ic_shopping_cart"
-        android:contentDescription="@string/ibShoppingCart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <android.widget.Button
-        android:id="@+id/btnFilterTour"
-        style="@style/btn_style"
-        android:layout_width="140dp"
-        android:layout_height="48dp"
-        android:background="@drawable/shape"
-        android:text="@string/btnFilters"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="9dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSearch" />
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/loadingAnimation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_rawRes="@raw/loading"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvTours"
+        android:id="@+id/rvCart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFilterTour"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch"
         tools:listitem="@layout/item_tour" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
