@@ -58,5 +58,7 @@
     <string name="headerMyHotels">Мои отели</string>
     <string name="headerMyTickets">Мои билеты</string>
     <string name="ibShoppingCart">Корзина</string>
+    <string name="search_shopping_cart">Поиск по корзине</string>
+    <string name="title_shopping_cart">Корзина</string>
 
 </resources>

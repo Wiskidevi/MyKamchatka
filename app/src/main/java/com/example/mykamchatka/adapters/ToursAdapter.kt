@@ -40,14 +40,15 @@ class ToursAdapter(
         viewHolder.durationTextView.text = tour.duration
         viewHolder.priceTextView.text = tour.price
 
-
         Glide.with(viewHolder.itemView.context)
-            .load(tour.imageUrl) // Загрузка изображения по ссылке
-            .into(viewHolder.imageToursView) // Установка изображения в ImageView
+            .load(tour.imageUrl)
+            .into(viewHolder.imageToursView)
 
         // Обработка клика по кнопке "Добавить в корзину"
         viewHolder.btnBuyTour.setOnClickListener {
             onAddToCartClicked(tour) // Передача элемента в функцию
+            viewHolder.btnBuyTour.setImageResource(R.drawable.ic_shopping_card_add)
+            viewHolder.btnBuyTour.isEnabled=false
         }
     }
 

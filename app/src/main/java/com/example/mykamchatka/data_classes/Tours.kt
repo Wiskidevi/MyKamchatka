@@ -4,7 +4,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Tours (
-    val id: Int = 0,
     val name: String = "",
     val date: String = "",
     val duration: String = "",

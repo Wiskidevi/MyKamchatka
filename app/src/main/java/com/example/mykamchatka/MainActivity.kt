@@ -2,11 +2,13 @@ package com.example.mykamchatka
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.example.mykamchatka.databinding.ActivityMainBinding
 import com.example.mykamchatka.living_branch.NavLivingFragment
 import com.example.mykamchatka.news_branch.NavNewsFragment
@@ -19,6 +21,9 @@ class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
     private val binding
         get() = _binding ?: throw IllegalStateException("Binding for ActivityRegistration must not be null!")
+
+    // использование DataModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,6 +71,7 @@ class MainActivity : AppCompatActivity() {
             view.updatePadding(bottom = 0) // Устанавливаем нижний padding в 0
             insets
         }
+
 
     }
 

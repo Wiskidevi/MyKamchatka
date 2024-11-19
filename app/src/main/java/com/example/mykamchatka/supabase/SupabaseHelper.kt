@@ -3,6 +3,7 @@ package com.example.mykamchatka.supabase
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.postgrest.Postgrest
+import io.github.jan.supabase.postgrest.from
 import io.github.jan.supabase.postgrest.postgrest
 
 
@@ -22,6 +23,11 @@ class SupabaseHelper {
         val client = getClient()
         val supabaseResponse = client.postgrest[tableName].select()
         return supabaseResponse.decodeList<T>()
+    }
+
+    suspend inline fun <reified T : Any> setData(tableName: String, data : List<T>) {
+        val client = getClient()
+        client.from(tableName).insert(data)
     }
 
 }
