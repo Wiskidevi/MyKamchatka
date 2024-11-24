@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mykamchatka.DataModel
+import com.example.mykamchatka.MoreInfoFragment
 import com.example.mykamchatka.R
 import com.example.mykamchatka.supabase.SupabaseHelper
 import com.example.mykamchatka.adapters.ToursAdapter
@@ -40,14 +41,22 @@ class NavToursFragment : Fragment() {
 
         val shoppingCartFragment = ShoppingCartFragment()
 
+        toursAdapter = ToursAdapter(
+            emptyList(),
+            onAddToCartClicked = { tour ->
+                addToCart(tour) // Обработка добавления в корзину
+            },
+            onMoreInfoClicked = { tour ->
+                val moreInfoFragment = MoreInfoFragment.newInstance(tour)
+                addFragment(moreInfoFragment)
+            }
+        )
 
-        toursAdapter = ToursAdapter(emptyList()) { tour ->
-            addToCart(tour) // Обработка добавления в корзину
-        }
         binding.rvTours.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = toursAdapter
         }
+
 
         // Показываем анимацию загрузки
         binding.loadingAnimation.visibility = View.VISIBLE

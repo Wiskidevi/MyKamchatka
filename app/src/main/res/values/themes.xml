@@ -55,8 +55,23 @@
     <style name="heading_text_top">
         <item name="android:fontFamily">@font/pangolin</item>
         <item name="android:textSize">22sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:layout_marginTop">30dp</item>
     </style>
+
+    <style name="title_text_default">
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/pangolin</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="text_all">
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/pangolin</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+
 
 </resources>

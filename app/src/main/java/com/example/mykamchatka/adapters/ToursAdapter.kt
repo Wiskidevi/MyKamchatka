@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
@@ -14,7 +15,8 @@ import com.example.mykamchatka.data_classes.Tours
 
 class ToursAdapter(
     private var mTours: List<Tours>,
-    private val onAddToCartClicked: (Tours) -> Unit
+    private val onAddToCartClicked: (Tours) -> Unit,
+    private val onMoreInfoClicked: (Tours) -> Unit
 ) : RecyclerView.Adapter<ToursAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -24,6 +26,7 @@ class ToursAdapter(
         val priceTextView: TextView = itemView.findViewById(R.id.tvPriceTours)
         val imageToursView: ImageView = itemView.findViewById(R.id.ivTours)
         val btnBuyTour: ImageButton = itemView.findViewById(R.id.btnBuyTour)
+        val btnMoreTour: Button = itemView.findViewById(R.id.btnMoreTour)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -49,6 +52,10 @@ class ToursAdapter(
             onAddToCartClicked(tour) // Передача элемента в функцию
             viewHolder.btnBuyTour.setImageResource(R.drawable.ic_shopping_card_add)
             viewHolder.btnBuyTour.isEnabled=false
+        }
+
+        viewHolder.btnMoreTour.setOnClickListener {
+            onMoreInfoClicked(tour)
         }
     }
 

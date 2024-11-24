@@ -6,5 +6,6 @@
     <color name="btn_color">#16296C</color>
     <color name="error_color">#FF0000</color>
     <color name="text_input_color">#525252</color>
+    <color name="gray_text">#808080</color>
 
 </resources>

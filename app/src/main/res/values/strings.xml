@@ -60,5 +60,8 @@
     <string name="ibShoppingCart">Корзина</string>
     <string name="search_shopping_cart">Поиск по корзине</string>
     <string name="title_shopping_cart">Корзина</string>
+    <string name="header_more_info">Подробнее</string>
+    <string name="info">info</string>
+    <string name="tvWgatTake">Что взять с собой?</string>
 
 </resources>

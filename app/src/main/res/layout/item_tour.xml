@@ -88,8 +88,7 @@
                             android:foregroundGravity="center"
                             style="@style/btn_transparent_style"
                             android:contentDescription="@string/btnBuy"
-                            android:background="@drawable/ic_shopping_card"
-                            android:text="@string/btnReadNews" />
+                            android:background="@drawable/ic_shopping_card" />
 
                         <View android:layout_width="0dp"
                             android:layout_height="match_parent"

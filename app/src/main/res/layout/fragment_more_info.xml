@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoreInfoFragment">
+
+    <TextView
+        android:id="@+id/tvHeaderMoreInfo"
+        style="@style/heading_text_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/header_more_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/flPict"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeaderMoreInfo">
+
+        <!-- Основное изображение -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivMoreInfo"
+            android:layout_width="match_parent"
+            android:layout_height="452dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/doline_test" />
+
+        <!-- Прямоугольник с закруглёнными краями -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bottom_inverse_rounded" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tvHeaderItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/header_more_info"
+        style="@style/title_text_default"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="-40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flPict" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/header_more_info"
+        style="@style/text_all"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:textColor="@color/gray_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeaderItem" />
+
+    <TextView
+        android:id="@+id/tvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/header_more_info"
+        style="@style/text_all"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/header_more_info"
+        style="@style/text_all"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDuration" />
+
+    <TextView
+        android:id="@+id/tvWhatTake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvWgatTake"
+        style="@style/text_all"
+        android:textSize="24sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+    <TextView
+        android:id="@+id/tvWhatTakeDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/header_more_info"
+        style="@style/text_all"
+        android:textColor="@color/gray_text"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWhatTake" />
+
+    <ImageButton
+        android:id="@+id/btnBuyTour"
+        style="@style/btn_transparent_style"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/ic_shopping_card"
+        android:contentDescription="@string/btnBuy"
+        app:layout_constraintEnd_toStartOf="@+id/btnShare"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeaderItem" />
+
+    <ImageButton
+        android:id="@+id/btnShare"
+        style="@style/btn_transparent_style"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/ic_share"
+        android:contentDescription="@string/btnBuy"
+        app:layout_constraintEnd_toStartOf="@+id/btnLike"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeaderItem" />
+
+    <ImageButton
+        android:id="@+id/btnLike"
+        style="@style/btn_transparent_style"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/ic_like"
+        android:contentDescription="@string/btnBuy"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeaderItem" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
