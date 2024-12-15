@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".tours_branch.AddTourFragment">
+
+    <TextView
+        android:id="@+id/tvTours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pangolin"
+        android:text="@string/tvAddTour"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_tour_name"
+        style="@style/til_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTours"
+        app:boxStrokeErrorColor="@color/error_color"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@color/error_color"
+        app:placeholderTextAppearance="@font/pangolin"
+        app:placeholderTextColor="@color/text_input_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tf_tour_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pangolin"
+            android:hint="@string/tvEnterTourName"
+            android:inputType="textPersonName"
+            android:textColor="#525252"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_tour_date"
+        style="@style/til_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_tour_name"
+        app:boxStrokeErrorColor="@color/error_color"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@color/error_color"
+        app:placeholderTextAppearance="@font/pangolin"
+        app:placeholderTextColor="@color/text_input_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tf_tour_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pangolin"
+            android:hint="@string/enterTourDate"
+            android:inputType="textPersonName"
+            android:textColor="#525252"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_available_seats"
+        style="@style/til_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_tour_date"
+        app:boxStrokeErrorColor="@color/error_color"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@color/error_color"
+        app:placeholderTextAppearance="@font/pangolin"
+        app:placeholderTextColor="@color/text_input_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tf_available_seats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pangolin"
+            android:hint="@string/enterTourDate"
+            android:inputType="textPersonName"
+            android:textColor="#525252"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_tour_operator_name"
+        style="@style/til_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_available_seats"
+        app:boxStrokeErrorColor="@color/error_color"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@color/error_color"
+        app:placeholderTextAppearance="@font/pangolin"
+        app:placeholderTextColor="@color/text_input_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tf_tour_operator_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pangolin"
+            android:hint="@string/enterTourOperatorName"
+            android:inputType="textPersonName"
+            android:textColor="#525252"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

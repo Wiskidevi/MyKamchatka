@@ -63,5 +63,29 @@
     <string name="header_more_info">Подробнее</string>
     <string name="info">info</string>
     <string name="tvWgatTake">Что взять с собой?</string>
+    <string name="tv_about_operator">О Туроператоре</string>
+    <string name="btn_booking">Забронировать</string>
+    <string name="btn_chat">Чат с Туроператором</string>
+    <string name="til_enter_FCs">Введите ФИО</string>
+    <string name="til_enter_count">Введите количество человек</string>
+    <string name="til_phone_number">Номер телефона для связи</string>
+    <string name="tv_tour_card">Тур</string>
+    <string name="tv_proce_card">Цена</string>
+    <string name="tv_count_card">Количество</string>
+    <string name="tv_count_more_card">шт.</string>
+    <string name="tv_on_name_card">На имя</string>
+    <string name="tv_name_card">Имя</string>
+    <string name="tv_total_sum_card">Итого:</string>
+    <string name="tv_total_sum_value_card">Цена</string>
+    <string name="btn_to_pay">Оплатить</string>
+    <string name="btn_done">Готово</string>
+    <string name="btn_to_my_booking">Перейти в мои бронирования</string>
+    <string name="tv_booking_issued">Бронь успешно оформлена!</string>
+    <string name="checkcircle">checkCircle</string>
+    <string name="addtour">AddTour</string>
+    <string name="tvAddTour">Добавление тура</string>
+    <string name="tvEnterTourName">Введите название тура</string>
+    <string name="enterTourDate">Выберите дату тура</string>
+    <string name="enterTourOperatorName">Введите название туроператора</string>
 
 </resources>

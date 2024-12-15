@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.mykamchatka.BookingEnterInformationFragment
 import com.example.mykamchatka.DataModel
 import com.example.mykamchatka.MoreInfoFragment
 import com.example.mykamchatka.R
@@ -66,19 +67,23 @@ class NavToursFragment : Fragment() {
         val db = SupabaseHelper()
 
         lifecycleScope.launch {
-            val data = db.getData<Tours>("ToursTable")
-            toursAdapter.updateData(data)
-
-            binding.loadingAnimation.visibility = View.GONE
-            binding.rvTours.visibility = View.VISIBLE
-            binding.btnFilterTour.visibility = View.VISIBLE
+            try {
+                val data = db.getData<Tours>("ToursTable")
+                toursAdapter.updateData(data)
+            } catch(e: Exception){
+                Log.e("NavToursFragment", "Error fetching data ${e.message}")
+            } finally {
+                binding.loadingAnimation.visibility = View.GONE
+                binding.rvTours.visibility = View.VISIBLE
+                binding.btnFilterTour.visibility = View.VISIBLE
+            }
             return@launch
         }
 
 
         binding.ibShoppingCart.setOnClickListener {
             lifecycleScope.launch {
-                var listToDB: MutableList<Tours> = mutableListOf()
+                val listToDB: MutableList<Tours> = mutableListOf()
 
                 val emptyList: List<Tours> = emptyList()
 

@@ -68,8 +68,8 @@ class NavProfileFragment : Fragment() {
 
     private fun addFragment(fragment: Fragment) {
         parentFragmentManager.beginTransaction().apply {
-            add(R.id.flFragment, fragment) // Добавляет фрагмент, не заменяя основной (наслаиваем)
-            addToBackStack(null) // Добавляет в back stack, чтобы вернуться назад при нажатии кнопки "Назад"
+            add(R.id.flFragment, fragment)
+            addToBackStack(null)
             commit()
         }
     }

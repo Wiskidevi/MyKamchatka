@@ -5,22 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.example.mykamchatka.data_classes.Tours
-import com.example.mykamchatka.databinding.FragmentMoreInfoBinding
-import com.example.mykamchatka.databinding.FragmentProfileNavMenuBinding
-import com.google.android.material.imageview.ShapeableImageView
+import com.example.mykamchatka.databinding.FragmentBookingEnterInformationBinding
 
-class MoreInfoFragment : Fragment() {
 
-    private var _binding: FragmentMoreInfoBinding? = null
+class BookingEnterInformationFragment : Fragment() {
+
+    private var _binding: FragmentBookingEnterInformationBinding? = null
     private val binding get() = _binding!!
 
     private var selectedTour: Tours? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         arguments?.let {
             selectedTour = it.getParcelable("selectedTour")
         }
@@ -30,16 +29,12 @@ class MoreInfoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentMoreInfoBinding.inflate(inflater, container, false)
+        _binding = FragmentBookingEnterInformationBinding.inflate(inflater, container, false)
 
-        // Установка данных в элементы интерфейса
         selectedTour?.let { tour ->
             binding.tvHeaderItem.text = tour.name
-            binding.tvPrice.text = tour.price
             binding.tvDuration.text = tour.duration
             binding.tvDate.text = tour.date
-            binding.tvWhatTakeDesc.text = tour.things_to_bag
-
             binding.ivMoreInfo.apply {
                 val firstImgUrl = tour.imageUrl.firstOrNull()
                 Glide.with(this).load(firstImgUrl).into(this)
@@ -52,10 +47,15 @@ class MoreInfoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        binding.btnBooking.setOnClickListener {
+        binding.btnNextBooking.setOnClickListener {
+
+            val userInputFCs = binding.tilUserFCs.editText?.text.toString()
+            val userInputCount = binding.tilUserCount.editText?.text.toString()
+            val userInputPhoneNumber = binding.tilUserPhone.editText?.text.toString()
+
             selectedTour?.let { tour ->
-                val bookingEnterInformationFragment = BookingEnterInformationFragment.newInstance(tour)
-                addFragment(bookingEnterInformationFragment)
+                val bookingBillFragment = BookingBillFragment.newInstance(tour, userInputFCs, userInputCount, userInputPhoneNumber)
+                addFragment(bookingBillFragment)
             }
         }
 
@@ -70,8 +70,8 @@ class MoreInfoFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(tour: Tours): MoreInfoFragment {
-            val fragment = MoreInfoFragment()
+        fun newInstance(tour: Tours): BookingEnterInformationFragment {
+            val fragment = BookingEnterInformationFragment()
             val args = Bundle().apply {
                 putParcelable("selectedTour", tour)
             }

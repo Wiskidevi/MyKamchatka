@@ -4,8 +4,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_color_light">#FFFFFFFF</color>
     <color name="btn_color">#16296C</color>
+    <color name="btn_light_color">#D7DBE7</color>
     <color name="error_color">#FF0000</color>
     <color name="text_input_color">#525252</color>
     <color name="gray_text">#808080</color>
+    <color name="dark_gray_text">#606060</color>
 
 </resources>

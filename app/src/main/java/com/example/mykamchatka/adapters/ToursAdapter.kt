@@ -43,10 +43,18 @@ class ToursAdapter(
         viewHolder.durationTextView.text = tour.duration
         viewHolder.priceTextView.text = tour.price
 
-        Glide.with(viewHolder.itemView.context)
-            .load(tour.imageUrl)
-            .into(viewHolder.imageToursView)
+        val firstImgUrl = tour.imageUrl.firstOrNull()
 
+        if(firstImgUrl != null) {
+            Glide.with(viewHolder.itemView.context)
+                .load(firstImgUrl)
+                .into(viewHolder.imageToursView)
+        }
+//        else{
+//            Glide.with(viewHolder.itemView.context)
+//            .load(R.drawable.placeholder_image) // Ваш placeholder
+//            .into(viewHolder.imageToursView)
+//        }
         // Обработка клика по кнопке "Добавить в корзину"
         viewHolder.btnBuyTour.setOnClickListener {
             onAddToCartClicked(tour) // Передача элемента в функцию

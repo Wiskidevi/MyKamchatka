@@ -77,6 +77,10 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.8.5")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
 
-    
+    // для работы с json
+    implementation("com.google.code.gson:gson:2.10.1")
+
+
+
 
 }
