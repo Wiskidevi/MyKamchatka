@@ -58,6 +58,11 @@ class NavToursFragment : Fragment() {
             adapter = toursAdapter
         }
 
+        binding.ibtnAddTour.setOnClickListener{
+            val addTourFragment = AddTourFragment.newInstance()
+            addFragment(addTourFragment)
+        }
+
 
         // Показываем анимацию загрузки
         binding.loadingAnimation.visibility = View.VISIBLE

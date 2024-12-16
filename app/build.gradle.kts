@@ -80,7 +80,10 @@ dependencies {
     // для работы с json
     implementation("com.google.code.gson:gson:2.10.1")
 
+    // supabase storage
+    implementation("io.github.jan-tennert.supabase:storage-kt:3.0.3")
 
-
+    // compose
+    implementation("io.coil-kt:coil-compose:2.4.0")
 
 }

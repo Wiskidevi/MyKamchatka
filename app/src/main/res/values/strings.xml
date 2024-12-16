@@ -87,5 +87,9 @@
     <string name="tvEnterTourName">Введите название тура</string>
     <string name="enterTourDate">Выберите дату тура</string>
     <string name="enterTourOperatorName">Введите название туроператора</string>
+    <string name="btn_publish">Опубликовать</string>
+    <string name="tvavailableSeats">Введите количество свободных мест</string>
+    <string name="tvTourDuration">Введите продолжительность тура</string>
+    <string name="tvTourPrice">Введите цену тура</string>
 
 </resources>

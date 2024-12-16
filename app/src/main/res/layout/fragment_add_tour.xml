@@ -77,7 +77,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_available_seats"
+        android:id="@+id/til_tour_duration"
         style="@style/til_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -93,11 +93,67 @@
         app:placeholderTextColor="@color/text_input_color">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tf_tour_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pangolin"
+            android:hint="@string/tvTourDuration"
+            android:inputType="textPersonName"
+            android:textColor="#525252"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_tour_price"
+        style="@style/til_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_tour_duration"
+        app:boxStrokeErrorColor="@color/error_color"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@color/error_color"
+        app:placeholderTextAppearance="@font/pangolin"
+        app:placeholderTextColor="@color/text_input_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tf_tour_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pangolin"
+            android:hint="@string/tvTourPrice"
+            android:inputType="textPersonName"
+            android:textColor="#525252"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_available_seats"
+        style="@style/til_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_tour_price"
+        app:boxStrokeErrorColor="@color/error_color"
+        app:errorEnabled="true"
+        app:helperTextTextColor="@color/error_color"
+        app:placeholderTextAppearance="@font/pangolin"
+        app:placeholderTextColor="@color/text_input_color">
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tf_available_seats"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/pangolin"
-            android:hint="@string/enterTourDate"
+            android:hint="@string/tvavailableSeats"
             android:inputType="textPersonName"
             android:textColor="#525252"
             android:textSize="14sp" />
@@ -132,5 +188,38 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <ImageButton
+        android:id="@+id/ibtnAddImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginStart="100dp"
+        android:contentDescription="@string/addtour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_tour_operator_name"
+        android:background="@drawable/ic_plus"/>
+
+    <android.widget.Button
+        android:id="@+id/btnPublishTour"
+        style="@style/btn_style"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape"
+        android:text="@string/btn_publish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_tour_operator_name" />
+
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPublishTour" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
