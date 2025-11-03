@@ -43,10 +43,10 @@ class OperatorRegCategoryActivity : AppCompatActivity() {
 
             val role = "Туристическая компания"
 
-            val user = User(email, pass, surname, name, thirdname, birthday, role)
+            //val user = User(email, pass, surname, name, thirdname, birthday, role)
 
             val db = DbHelper(this, null)
-            db.addUser(user)
+            //db.addUser(user)
             Toast.makeText(this, "Компания добавлена", Toast.LENGTH_SHORT).show()
             val intent = Intent(this@OperatorRegCategoryActivity, MainActivity::class.java)
             startActivity(intent)

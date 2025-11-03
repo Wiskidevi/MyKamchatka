@@ -4,6 +4,9 @@ import android.content.Context
 import android.net.Uri
 import android.util.Log
 import io.github.jan.supabase.SupabaseClient
+import io.github.jan.supabase.auth.OtpType
+import io.github.jan.supabase.auth.auth
+import io.github.jan.supabase.auth.providers.builtin.Email
 import io.github.jan.supabase.createSupabaseClient
 import io.github.jan.supabase.postgrest.Postgrest
 import io.github.jan.supabase.postgrest.from
@@ -34,7 +37,7 @@ class SupabaseHelper() {
             val bucket = client.storage[bucketName]
             bucket.upload("public/$fileName", fileData)
             val projectUrl = "https://dghywtgmjhxooohbuthl.supabase.co"
-            return "$projectUrl/storage/v1/object/public/$bucketName/$fileName"
+            return "$projectUrl/storage/v1/object/public/$bucketName/public/$fileName"
         } catch (e: Exception) {
             Log.e("SupabaseHelper", "Error uploading image to bucket: $bucketName", e)
             throw e
@@ -52,5 +55,16 @@ class SupabaseHelper() {
         val client = getClient()
         client.from(tableName).insert(data)
     }
+
+    suspend fun addUser(emailU: String, passwordU: String): String {
+        val client = getClient()
+        val user = client.auth.signUpWith(Email){
+            email = emailU
+            password = passwordU
+        }
+        return user!!.id
+    }
+
+
 
 }

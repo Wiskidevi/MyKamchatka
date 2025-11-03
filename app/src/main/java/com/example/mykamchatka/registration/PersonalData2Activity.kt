@@ -7,10 +7,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import com.example.mykamchatka.supabase.DbHelper
 import com.example.mykamchatka.R
 import com.example.mykamchatka.supabase.User
 import com.example.mykamchatka.databinding.ActivityPersonalData2Binding
+import com.example.mykamchatka.supabase.SupabaseHelper
+import kotlinx.coroutines.launch
 
 class PersonalData2Activity : AppCompatActivity() {
 
@@ -42,13 +45,15 @@ class PersonalData2Activity : AppCompatActivity() {
 
             when (selectedId) {
                 binding.rbTourist.id -> {
-
                     val role = binding.rbTourist.text.toString()
 
-                    val user = User(email, pass, surname, name, thirdname, birthday, role)
 
-                    val db = DbHelper(this, null)
-                    db.addUser(user)
+                    val db = SupabaseHelper()
+                    lifecycleScope.launch {
+                        val uuid = db.addUser(email, pass)
+                        val user = User(uuid, email, pass, surname, name, thirdname, birthday, role)
+                    }
+
                     Toast.makeText(this, "Пользователь добавлен", Toast.LENGTH_SHORT).show()
 
                     val intent = Intent(this@PersonalData2Activity, TouristRegOkActivity::class.java)

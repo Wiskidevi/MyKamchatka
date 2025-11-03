@@ -62,6 +62,7 @@ class AddTourFragment : Fragment() {
 
         binding.btnPublishTour.setOnClickListener{
             saveTourToDatabase()
+            //parentFragmentManager.popBackStack()
         }
     }
 
@@ -106,7 +107,6 @@ class AddTourFragment : Fragment() {
                 // Загружаем изображения
                 val uploadedImageUrls = uploadImagesToSupabase()
 
-                // Создаем объект Tours
                 val newTour = Tours(
                     name = tourName,
                     date = tourDate,
@@ -115,6 +115,8 @@ class AddTourFragment : Fragment() {
                     imageUrl = uploadedImageUrls,
                     things_to_bag = thingsToBag
                 )
+
+                Log.e("SaveTour", newTour.toString())
 
                 // Сохраняем данные в таблицу
                 SupabaseHelper().setData("ToursTable", listOf(newTour))
